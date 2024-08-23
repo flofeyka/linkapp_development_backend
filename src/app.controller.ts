@@ -5,7 +5,7 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get('/send')
+  @Post('/send')
   async SendEmail(@Body() ApplicationForm) {
     return this.appService.SendEmail(ApplicationForm);
   }
