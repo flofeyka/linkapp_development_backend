@@ -7,6 +7,8 @@ COPY yarn*.lock ./
 
 RUN yarn install
 
+COPY . .
+
 EXPOSE 8000
 
 CMD ["node", "app.js"]
